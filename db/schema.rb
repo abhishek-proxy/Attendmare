@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225201235) do
+ActiveRecord::Schema.define(version: 20150226195603) do
 
   create_table "attendence_records", force: true do |t|
     t.date     "day"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150225201235) do
     t.string   "gender"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "college_id"
   end
 
   create_table "subjects", force: true do |t|
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150225201235) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "college_id"
   end
 
   create_table "timetables", force: true do |t|
