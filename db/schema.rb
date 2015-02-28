@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228172409) do
+ActiveRecord::Schema.define(version: 20150228175041) do
 
   create_table "attendence_records", force: true do |t|
-    t.date     "day"
+    t.date     "attendence_date"
     t.string   "attend_record"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150228172409) do
     t.string   "branch"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "timetable_id"
   end
 
   create_table "teachers", force: true do |t|
@@ -72,7 +73,7 @@ ActiveRecord::Schema.define(version: 20150228172409) do
 
   create_table "timetables", force: true do |t|
     t.time     "period_time"
-    t.date     "date"
+    t.string   "day"
     t.string   "year"
     t.string   "semester"
     t.string   "branch"
