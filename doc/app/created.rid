@@ -1,0 +1,10 @@
+Fri, 27 Feb 2015 00:04:45 +0530
+README.rdoc	Wed, 25 Feb 2015 23:37:10 +0530
+app/controllers/application_controller.rb	Wed, 25 Feb 2015 23:37:10 +0530
+app/helpers/application_helper.rb	Wed, 25 Feb 2015 23:37:10 +0530
+app/models/attendence_record.rb	Thu, 26 Feb 2015 01:46:43 +0530
+app/models/college.rb	Thu, 26 Feb 2015 01:46:43 +0530
+app/models/student.rb	Thu, 26 Feb 2015 01:46:43 +0530
+app/models/subject.rb	Thu, 26 Feb 2015 01:46:43 +0530
+app/models/teacher.rb	Thu, 26 Feb 2015 01:46:43 +0530
+app/models/timetable.rb	Thu, 26 Feb 2015 01:46:43 +0530
