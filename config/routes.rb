@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'college/create' => 'college#create'
   post 'teacher/create' => 'teacher#create'
   post 'student/create' => 'student#create'
+  post 'subject/create' => 'subject#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

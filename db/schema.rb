@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228175041) do
+ActiveRecord::Schema.define(version: 20150302052806) do
 
   create_table "attendence_records", force: true do |t|
     t.date     "attendence_date"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20150228175041) do
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "periodtimes", force: true do |t|
+    t.time     "period_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "subject_id"
+    t.integer  "timetable_id"
   end
 
   create_table "students", force: true do |t|
@@ -57,7 +65,6 @@ ActiveRecord::Schema.define(version: 20150228175041) do
     t.string   "branch"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "timetable_id"
   end
 
   create_table "teachers", force: true do |t|
