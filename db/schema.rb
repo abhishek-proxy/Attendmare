@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 20150302052806) do
   end
 
   create_table "timetables", force: true do |t|
-    t.time     "period_time"
     t.string   "day"
     t.string   "year"
     t.string   "semester"
