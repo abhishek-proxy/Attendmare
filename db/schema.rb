@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305182459) do
+ActiveRecord::Schema.define(version: 20150305200818) do
 
   create_table "attendence_records", force: true do |t|
     t.date     "attendence_date"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150305182459) do
     t.datetime "date_of_birth"
     t.string   "phone"
     t.string   "gender"
+    t.integer  "reg_no"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "college_id"
@@ -66,7 +67,16 @@ ActiveRecord::Schema.define(version: 20150305182459) do
     t.string   "branch"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "teacher_id"
   end
+
+  create_table "subjects_teachers", id: false, force: true do |t|
+    t.integer "teacher_id"
+    t.integer "subject_id"
+  end
+
+  add_index "subjects_teachers", ["subject_id"], name: "index_subjects_teachers_on_subject_id"
+  add_index "subjects_teachers", ["teacher_id"], name: "index_subjects_teachers_on_teacher_id"
 
   create_table "teachers", force: true do |t|
     t.string   "first_name"

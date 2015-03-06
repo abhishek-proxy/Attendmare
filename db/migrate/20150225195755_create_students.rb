@@ -10,7 +10,7 @@ class CreateStudents < ActiveRecord::Migration
       t.datetime :date_of_birth
       t.string :phone
       t.string :gender
-
+      t.integer :reg_no
       
       
       t.timestamps

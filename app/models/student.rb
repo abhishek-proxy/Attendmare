@@ -22,6 +22,6 @@ class Student < ActiveRecord::Base
 
 
   def required_params(params)
-    params.permit(:first_name, :last_name,:email, :year,:semester, :branch, :date_of_birth, :phone, :gender, :college_id)
+    params.permit(:first_name, :last_name,:email, :year,:semester, :branch, :date_of_birth, :phone, :gender, :college_id, :roll_no, :reg_no)
   end
 end
