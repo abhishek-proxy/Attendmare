@@ -16,6 +16,31 @@ class Subject < ActiveRecord::Base
       return {msg: "wrong parameters", status: false}
     end
   end
+
+  def get_subject_from_branch_year(params)
+    begin
+      subjects = Subject.where(year: params[:year],branch: params[:branch])
+      subject_json = []
+      p params
+      subjects.each do |subject|
+        if ((subject.semester).to_i % 2 == (params[:semester].to_i) % 2)
+          subject_json << map_subject(subject)
+        else
+         # subject_json << map_subject(subject)
+        end
+
+      end
+    rescue
+      return {msg: "something went wrong ", status: false}
+    end
+    return {msg: "request done", status: true, subjects: subject_json}
+    
+  end
+  
+  def map_subject(subject)
+    return {name: subject.name, id: subject.id}
+
+  end
   def required_params(params)
     params.permit(:name, :year, :semester, :branch, :timetable_id,)
   end

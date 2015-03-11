@@ -17,6 +17,18 @@ class College < ActiveRecord::Base
   	end
   end
 
+  def get_college_branch(params)
+    begin
+      college = College.find(params[:college_id])
+      student_branches = college.students.select("DISTINCT(BRANCH)")
+      branches = []
+      student_branches.each do |branch|
+        branches<<branch.branch
+      end
+    rescue
+    end
+    return {msg: "got college branch",status: "true", branches: branches}
+  end
 
 
   

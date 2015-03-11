@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   post 'student/create' => 'student#create'
   post 'subject/create' => 'subject#create'
   post 'teacher/sign_in' => 'teacher#sign_in'
-  post 'teacher/subjects/add' => 'teacher'
+  get 'college/branch' => 'college#get_college_branch'
+  post 'teacher/subjects/add' => 'teacher#add_subjects_to_teacher'
+  get 'teacher/subjects' => 'subject#get_subject_from_branch_year'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
